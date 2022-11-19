@@ -1,0 +1,2 @@
+let o={sBox:document.querySelector("#search-box"),cList:document.querySelector(".country-list"),cInfo:document.querySelector(".country-info")};console.log(o.cInfo),o.sBox.addEventListener("input",(function(o){o.preventDefault(),e=o.target.value,fetch(`https://restcountries.com/v3.1/name/${e}`).then((o=>(o.ok||console.log("error"),o.json()))).then((o=>{console.log(o[0].flag),console.log(o[0].altSpellings[2]),console.log(o[0].capital[0]),console.log(o[0].population),console.log(o[0].languages)}));var e}));
+//# sourceMappingURL=index.b4279482.js.map
