@@ -10,13 +10,11 @@ let refs = {
 const debounce = require('lodash.debounce');
 const DEBOUNCE_DELAY = 300;
 // console.log(refs.cInfo);
+
+
 refs.sBox.addEventListener('input', debounce(onSearch, DEBOUNCE_DELAY))
 function onSearch(e) {
-    console.dir(e.path[0]);
+    // console.dir(e.path[0]);
     e.preventDefault();
-    if (e.target.value ==='') {
-        refs.cList.innerHTML = '';
-        refs.cInfo.innerHTML = '';
-    }
     fetchCountries(e.target.value)
 }
