@@ -16,22 +16,28 @@ function fetchCountries(name) {
         for (const key in countryGetInfo) {
             const countryItems = countryGetInfo[key]
             const { flags, name, capital, languages, population } = countryItems;
-            if (refs.cList.childElementCount>10) {
-                refs.cList.innerHTML = ''
-            }
-            const markupFirst = `<div class="flag-country-block">
+            const markupList = `<div class="flag-country-block">
         <img
           class="flag"
           src="${flags.png}"
           alt="flag"
         />
         <h2>${name.common}</h2></div>`
-            refs.cList.insertAdjacentHTML("beforeend", markupFirst)
+            
+            refs.cList.insertAdjacentHTML("beforeend", markupList)
+
+            console.dir(refs.cList.childElementCount);
        
         }
-        console.dir(refs.cList.childElementCount);
     })
 }
+
+
+
+
+
+
+
     //         const markupSecond = refs.cInfo.innerHTML = `<ul class="country-info-details">
     //     <li class="country-info-item">
     //       <h2>Capital:</h2>
